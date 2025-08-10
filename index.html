@@ -4,86 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Ahmed Ahnaf Saqafi, Lecturer at MIST. Research, publications, and projects.">
-  <title>Ahmed Ahnaf Saqafi – Academic Portfolio</title>
+  <title>Ahmed A. Saqafi</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="#" class="font-semibold text-lg">Ahmed Ahnaf Saqafi</a>
-      <div class="space-x-6 text-sm font-medium">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#research" class="hover:text-blue-600">Research</a>
-        <a href="#publications" class="hover:text-blue-600">Publications</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#teaching" class="hover:text-blue-600">Teaching</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </div>
+  <nav class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+            <a href="#" class="font-bold text-lg text-gray-900">Ahmed Ahnaf Saqafi</a>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#research" class="text-gray-600 hover:text-blue-600 transition-colors">Research</a>
+                <a href="#publications" class="text-gray-600 hover:text-blue-600 transition-colors">Publications</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#teaching" class="text-gray-600 hover:text-blue-600 transition-colors">Teaching</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button can be added here if needed -->
+        </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="bg-white py-16 border-b">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h1 class="text-4xl font-bold mb-3">Ahmed Ahnaf Saqafi</h1>
-      <p class="text-lg text-gray-600">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science & Technology, Bangladesh</p>
+  <section class="bg-white py-20 md:py-24 border-b">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+      <!-- Left side text content -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-3">Ahmed Ahnaf Saqafi</h1>
+        <p class="text-lg text-gray-600">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science & Technology, Bangladesh</p>
+      </div>
+      <!-- Right side profile image -->
+      <div class="flex-shrink-0">
+        <img 
+          src="https://placehold.co/150x150/e2e8f0/334155?text=AAS" 
+          alt="Profile image of Ahmed Ahnaf Saqafi" 
+          class="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover shadow-lg border-4 border-white"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x150/e2e8f0/334155?text=AAS';"
+        >
+      </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">About Me</h2>
-    <p class="text-gray-700 leading-relaxed">
+  <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">About Me</h2>
+    <p class="text-gray-700 leading-relaxed text-base">
       B.Sc. in Mechanical Engineering from the Military Institute of Science and Technology, Bangladesh. Passionate about Control, Automation, Robotics, Additive Manufacturing, and Composite & Nanomaterials. Currently serving as Lecturer at MIST with a focus on research, teaching, and innovative engineering projects.
     </p>
   </section>
 
   <!-- Research Interests -->
-  <section id="research" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">Research Interests</h2>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-gray-200 rounded-full px-4 py-1 text-sm">Control, Automation and Robotics</span>
-      <span class="bg-gray-200 rounded-full px-4 py-1 text-sm">Additive Manufacturing</span>
-      <span class="bg-gray-200 rounded-full px-4 py-1 text-sm">Composite and Nanomaterials</span>
+  <section id="research" class="max-w-4xl mx-auto py-16 px-4 bg-gray-50 rounded-lg">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Research Interests</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="bg-blue-100 text-blue-800 rounded-full px-4 py-2 text-sm font-medium">Control, Automation and Robotics</span>
+      <span class="bg-green-100 text-green-800 rounded-full px-4 py-2 text-sm font-medium">Additive Manufacturing</span>
+      <span class="bg-purple-100 text-purple-800 rounded-full px-4 py-2 text-sm font-medium">Composite and Nanomaterials</span>
     </div>
   </section>
 
   <!-- Publications -->
-  <section id="publications" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">Publications</h2>
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Investigation of the Mechanical Properties of Repurposed-Net-Bag Reinforced Plastic</h3>
-      <p class="text-sm text-gray-600 italic">MIST International Journal of Science and Technology, 13(1), 59-64 (2025)</p>
-      <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">View Publication</a>
+  <section id="publications" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Publications</h2>
+    <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
+      <h3 class="font-semibold text-lg text-gray-900">Investigation of the Mechanical Properties of Repurposed-Net-Bag Reinforced Plastic</h3>
+      <p class="text-sm text-gray-700 mt-2">
+        <span class="font-semibold">Saqafi, Ahmed A.</span>, Afnan Sadia, Al-Amin R. Tarek, Ahad A. Alim, Farzana Y. Tuly, and Md. A. Rahman
+      </p>
+      <p class="text-sm text-gray-500 italic mt-1">MIST International Journal of Science and Technology, 13(1), 59-64 (2025)</p>
+      <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block mt-4 text-blue-600 font-semibold hover:underline">View Publication &rarr;</a>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="font-semibold text-lg">Universal Robot-Assisted Rehabilitation System</h3>
-        <p class="text-gray-700 mt-2">3D-printed elbow-assist device with a compact cycloidal gearbox and cable-driven mechanism for precise, low-cost physiotherapy.</p>
+  <section id="projects" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Projects</h2>
+    <div class="space-y-8"> <!-- Changed from a 2-column grid to a single-column stack -->
+      <!-- Project 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col transition-shadow duration-300 hover:shadow-xl">
+        <div class="flex-grow">
+          <h3 class="font-semibold text-lg text-gray-900">MAVERICK | MIST Mongol Barota</h3>
+          <p class="text-sm text-gray-500 mt-1 font-medium">November 2023 - July 2024</p>
+          <p class="text-gray-700 mt-3 text-base leading-relaxed">
+            Led the mechanical team MAVERICK, a remotely operated human-assistant rover designed for Martian and lunar exploration. It is equipped to traverse rugged, rocky terrains and is capable of remote operation, data collection, soil sampling, and retrieval. MAVERICK secured second position in the Anatolian Rover Challenge 2024, organized by the Space Exploration Society Türkiye (UKET).
+          </p>
+        </div>
+        <a href="#" class="inline-block mt-4 text-center bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors self-start">Learn More</a>
       </div>
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="font-semibold text-lg">MAVERICK (MIST Mongol Barota Rover)</h3>
-        <p class="text-gray-700 mt-2">
-          Rover for Martian and lunar exploration; runner-up in Anatolian Rover Challenge 2024, capable of autonomous and remote operation.
-          <br>
-          <a href="https://uket.space/arc2024" target="_blank" class="text-blue-600 hover:underline">[Ref. 1]</a>
-          <a href="https://mist.ac.bd/news/arc2024-maverick" target="_blank" class="text-blue-600 hover:underline">[Ref. 2]</a>
-        </p>
+      <!-- Project 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col transition-shadow duration-300 hover:shadow-xl">
+        <div class="flex-grow">
+          <h3 class="font-semibold text-lg text-gray-900">Design and Development of a Universal Robot-Assisted Rehabilitation System for Musculoskeletal Physiotherapy</h3>
+          <p class="text-sm text-gray-500 mt-1 font-medium">April 2024 - May 2025</p>
+          <p class="text-gray-700 mt-3 text-base leading-relaxed">
+            Developed a lightweight, 3D-printed elbow-assist device with a compact cycloidal gearbox and cable-driven mechanism for precise, low-cost physiotherapy. The system is capable of smooth flexion–extension with accuracy and consistent performance across varying loads and speeds. The device provides an affordable, lightweight, and portable rehabilitation solution that can improve patient recovery and accessibility to physiotherapy.
+          </p>
+        </div>
+        <a href="#" class="inline-block mt-4 text-center bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors self-start">Learn More</a>
       </div>
     </div>
   </section>
 
   <!-- Teaching -->
-  <section id="teaching" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">Courses Taught</h2>
-    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+  <section id="teaching" class="max-w-4xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Courses Taught</h2>
+    <ul class="list-disc list-inside pl-2 space-y-2 text-gray-700">
       <li>ME 376 – Control Engineering Sessional</li>
       <li>ME 142 – Workshop Sessional</li>
       <li>ME 150 – Mechanical Engineering Drawing</li>
@@ -92,15 +131,17 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-6 border-l-4 border-blue-600 pl-3">Contact</h2>
-    <p class="text-gray-700">Email: <a href="mailto:ahmedsaqafi01@gmail.com" class="text-blue-600 hover:underline">ahmedsaqafi01@gmail.com</a></p>
+  <section id="contact" class="max-w-4xl mx-auto py-16 px-4 bg-gray-50 rounded-lg">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Get in Touch</h2>
+    <p class="text-gray-700">Feel free to reach out for collaborations, research opportunities, or any inquiries.</p>
+    <p class="text-gray-700 mt-4">Email: <a href="mailto:ahmedsaqafi01@gmail.com" class="text-blue-600 font-semibold hover:underline">ahmedsaqafi01@gmail.com</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white border-t py-4">
-    <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">
-      © 2025 Ahmed Ahnaf Saqafi · Minimalist academic portfolio built with Tailwind CSS
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-6xl mx-auto text-center text-sm text-gray-500 px-4">
+      <p>© 2025 Ahmed Ahnaf Saqafi</p>
+      <p class="mt-1">Academic portfolio built with Tailwind CSS</p>
     </div>
   </footer>
 
