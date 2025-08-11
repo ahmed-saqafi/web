@@ -160,6 +160,8 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
   <section id="publications" class="max-w-4xl mx-auto py-8 px-4">
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Publications</h2>
     <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
+  <div class="flex items-start justify-between mb-2">
+    <div class="flex-1 pr-4">
       <h3 class="font-semibold text-lg text-gray-900">Investigation of the Mechanical Properties of Repurposed-Net-Bag Reinforced Plastic</h3>
       <p class="text-sm text-gray-700 mt-2">
         <span class="font-semibold">Saqafi, Ahmed A.</span>, Afnan Sadia, Al-Amin R. Tarek, Ahad A. Alim, Farzana Y. Tuly, and Md. A. Rahman
@@ -167,6 +169,27 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
       <p class="text-sm text-gray-500 italic mt-1">MIST International Journal of Science and Technology, 13(1), 59-64 (2025)</p>
       <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block mt-4 text-blue-600 font-semibold hover:underline">View Publication →</a>
     </div>
+    <button 
+      class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100 flex-shrink-0"
+      onclick="toggleExpandAbstract(this)"
+      aria-label="Toggle abstract"
+      aria-expanded="false"
+    >
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="abstract-details overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+    <div class="pt-4 border-t border-gray-200">
+      <h4 class="font-semibold text-gray-900 mb-2">Abstract:</h4>
+      <p class="text-gray-700 leading-relaxed text-base text-justify">
+        This study investigates the potential of recycling grocery net bags for reinforcing epoxy matrix composites, leveraging their favorable strength-to-weight ratio and offering a cost reduction and non-biodegradable waste reduction method. A composite material was made by combining 90 layers of fiber mesh with Lapox Metalam System B epoxy and hardener. The primary objective was to explore major mechanical properties, including ultimate tensile strength, yield strength, flexural strength, and impact strength. The ASTM-specified standards were maintained for the fabrication and testing of the specimen, utilizing a universal testing machine (UTM) and a pendulum impact tester. Test results show that elastic modulus of the composite ranges from 0.72 to 0.88 GPa and shear modulus ranges from 1.73 to 2.26 GPa. Also, the impact tests show an average impact strength of 66.27 kJ/m2.
+      </p>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- Projects -->
@@ -203,41 +226,71 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Courses Taught</h2>
     <div class="space-y-6">
       <!-- ME 376 -->
-<div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
-  <div class="flex items-center justify-between mb-2">
-    <h3 class="font-semibold text-lg text-gray-900">ME 376 – Control Engineering Sessional</h3>
-    <button 
-      class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100"
-      onclick="toggleExpand(this)"
-      aria-label="Toggle course details"
-    >
-      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-  </div>
-  
-  <div class="course-details overflow-hidden transition-all duration-300 ease-in-out max-h-0">
-    <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
-      This course provides hands-on experience in analyzing, modeling, and controlling various physical systems, including mechanical, electrical, hydraulic, and pneumatic. Students will learn to apply control engineering principles in real-world scenarios through laboratory experiments that bridge theory and practice. The curriculum covers block diagrams, transfer functions, and the use of <b>PID controllers</b>. A significant portion of the course involves system response analysis and simulation, primarily using <b>MATLAB</b>, along with the design and performance evaluation of feedback and digital/robust control systems. The main objective is to develop practical skills with modern control tools and simulation software.
-    </p>
-  </div>
-</div>
+      <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-semibold text-lg text-gray-900">ME 376 – Control Engineering Sessional</h3>
+          <button 
+            class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100"
+            onclick="toggleExpand(this)"
+            aria-label="Toggle course details"
+            aria-expanded="true">
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+          <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
+            This course provides hands-on experience in analyzing, modeling, and controlling various physical systems, including mechanical, electrical, hydraulic, and pneumatic. Students will learn to apply control engineering principles in real-world scenarios through laboratory experiments that bridge theory and practice. The curriculum covers block diagrams, transfer functions, and the use of <b>PID controllers</b>. A significant portion of the course involves system response analysis and simulation, primarily using <b>MATLAB</b>, along with the design and performance evaluation of feedback and digital/robust control systems. The main objective is to develop practical skills with modern control tools and simulation software.
+          </p>
+        </div>
+      </div>
       <!-- ME 142 -->
       <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
-        <h3 class="font-semibold text-lg text-gray-900 mb-2">ME 142 – Workshop Sessional</h3>
-        <p class="text-gray-700 leading-relaxed text-base text-justify">
-          This course offers practical training in fundamental manufacturing processes. Students gain hands-on experience with machining, welding, casting, molding, and sheet metal working. They learn to use key workshop tools, including lathes, milling machines, and drilling machines, while also practicing essential skills like measuring, marking, and cutting. The primary goal is to introduce students to these processes and help them develop the practical skills needed for fabricating simple mechanical components. The course also emphasizes the importance of safety and quality in manufacturing practices.
-        </p>
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-semibold text-lg text-gray-900">ME 142 – Workshop Sessional</h3>
+          <button 
+            class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100"
+            onclick="toggleExpand(this)"
+            aria-label="Toggle course details"
+            aria-expanded="true">
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+          <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
+            This course offers practical training in fundamental manufacturing processes. Students gain hands-on experience with machining, welding, casting, molding, and sheet metal working. They learn to use key workshop tools, including lathes, milling machines, and drilling machines, while also practicing essential skills like measuring, marking, and cutting. The primary goal is to introduce students to these processes and help them develop the practical skills needed for fabricating simple mechanical components. The course also emphasizes the importance of safety and quality in manufacturing practices.
+          </p>
+        </div>
       </div>
       <!-- ME 150 -->
       <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
-        <h3 class="font-semibold text-lg text-gray-900 mb-2">ME 180 – Basic Engineering Drawing</h3>
-        <h3 class="font-semibold text-lg text-gray-900 mb-2">ME 150 – Mechanical Engineering Drawing</h3>
-        <p class="text-gray-700 leading-relaxed text-base text-justify">
-          This course focuses on both manual and CAD-based engineering drawing. Students learn to communicate technical information accurately by creating and interpreting engineering sketches and drawings. The content includes orthographic projection, isometric and sectional views, and the fundamentals of 2D drafting using  <b>SolidWorks </b> or similar CAD software. The objective is to enable students to read, modify, and create technical drawings, laying a solid foundation for future design and drafting courses.
-        </p>
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <h3 class="font-semibold text-lg text-gray-900">ME 180 – Basic Engineering Drawing</h3>
+            <h3 class="font-semibold text-lg text-gray-900">ME 150 – Mechanical Engineering Drawing</h3>
+          </div>
+          <button 
+            class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100"
+            onclick="toggleExpand(this)"
+            aria-label="Toggle course details"
+            aria-expanded="true"
+          >
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+          <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
+            This course focuses on both manual and CAD-based engineering drawing. Students learn to communicate technical information accurately by creating and interpreting engineering sketches and drawings. The content includes orthographic projection, isometric and sectional views, and the fundamentals of 2D drafting using <b>SolidWorks</b> or similar CAD software. The objective is to enable students to read, modify, and create technical drawings, laying a solid foundation for future design and drafting courses.
+          </p>
+        </div>
       </div>
+
      </div>
   </section>
 
@@ -301,6 +354,25 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
     button.setAttribute('aria-expanded', 'false');
   }
 }
+
+  function toggleExpandAbstract(button) {
+  const details = button.closest('.bg-white').querySelector('.abstract-details');
+  const icon = button.querySelector('svg');
+  
+  if (details.style.maxHeight === '0px' || !details.style.maxHeight) {
+    // Expand
+    details.style.maxHeight = details.scrollHeight + 'px';
+    icon.style.transform = 'rotate(180deg)';
+    button.setAttribute('aria-expanded', 'true');
+  } else {
+    // Collapse
+    details.style.maxHeight = '0px';
+    icon.style.transform = 'rotate(0deg)';
+    button.setAttribute('aria-expanded', 'false');
+  }
+}
+
+  
 </script>
   
  </body>
