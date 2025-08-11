@@ -19,26 +19,6 @@
       scroll-padding-top: 4rem;
     }
 
-.container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .text-block {
-      background-color: transparent;
-      padding: 30px;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-
-    .image-block {
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     .profile-image {
       width: 250px;
       height: 250px;
@@ -84,11 +64,6 @@
 
       .mobile-order-2 {
         order: 2;
-      }
-
-      .text-block {
-        width: 100%;
-        text-align: center;
       }
 
       .image-block {
@@ -172,16 +147,16 @@
   
   <!-- Hero Section -->
   <section class="bg-white md:py-12 border-b">
-    <div class="container">
+    <div class="max-w-4xl mx-auto py-10 px-4 flex flex-col md:flex-row justify-between items-center gap-8">
       <!-- Desktop: Text left, Image right | Mobile: Image top, Text bottom -->
       <div class="desktop-layout">
         <div class="text-block mobile-order-2">
-          <h1>Ahmed Ahnaf Saqafi</h1>
-          <p class="job-title">Graduate Mechanical Engineer</p>
-          <p class="workplace">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science &amp; Technology, Bangladesh</p>
-          <p class="former-role">Former Mechanical Team Lead<br>Mongol Barota - MIST Mars Rover Society</p>
+          <h1 class="text-4xl md:text-5xl py-4 font-bold text-gray-900 mb-3">Ahmed Ahnaf Saqafi</h1>
+          <p class="text-xl text-gray-600 py-1">Graduate Mechanical Engineer</p>
+          <p class="text-lg text-gray-800 py-1">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science &amp; Technology, Bangladesh</p>
+          <p class="text-lg text-gray-600 py-1">Former Mechanical Team Lead<br>Mongol Barota - MIST Mars Rover Society</p>
         </div>
-        <div class="image-block mobile-order-1">
+        <div class="image-block flex-shrink- mobile-order-1">
           <img src="https://placehold.co/250x250/e2e8f0/334155?text=AS" 
                alt="Profile image" 
                class="profile-image" 
@@ -191,8 +166,9 @@
     </div>
   </section>
 
+<!----- bookmarks-------->
   <section class="bg-white py-8">
-<div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+      <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
             <a href="#research" class="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 hover:bg-gray-300 transition-colors">Research</a>
             <a href="#publications" class="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 hover:bg-gray-300 transition-colors">Publications</a>
             <a href="#projects" class="bg-gray-200 text-gray-800 rounded-lg px-4 py-2 hover:bg-gray-300 transition-colors">Projects</a>
