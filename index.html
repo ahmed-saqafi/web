@@ -203,12 +203,26 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Courses Taught</h2>
     <div class="space-y-6">
       <!-- ME 376 -->
-      <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
-        <h3 class="font-semibold text-lg text-gray-900 mb-2">ME 376 – Control Engineering Sessional</h3>
-        <p class="text-gray-700 leading-relaxed text-base text-justify">
-          This course provides hands-on experience in analyzing, modeling, and controlling various physical systems, including mechanical, electrical, hydraulic, and pneumatic. Students will learn to apply control engineering principles in real-world scenarios through laboratory experiments that bridge theory and practice. The curriculum covers block diagrams, transfer functions, and the use of  <b>PID controllers </b>. A significant portion of the course involves system response analysis and simulation, primarily using  <b>MATLAB </b>, along with the design and performance evaluation of feedback and digital/robust control systems. The main objective is to develop practical skills with modern control tools and simulation software.
-        </p>
-      </div>
+<div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
+  <div class="flex items-center justify-between mb-2">
+    <h3 class="font-semibold text-lg text-gray-900">ME 376 – Control Engineering Sessional</h3>
+    <button 
+      class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100"
+      onclick="toggleExpand(this)"
+      aria-label="Toggle course details"
+    >
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="course-details overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+    <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
+      This course provides hands-on experience in analyzing, modeling, and controlling various physical systems, including mechanical, electrical, hydraulic, and pneumatic. Students will learn to apply control engineering principles in real-world scenarios through laboratory experiments that bridge theory and practice. The curriculum covers block diagrams, transfer functions, and the use of <b>PID controllers</b>. A significant portion of the course involves system response analysis and simulation, primarily using <b>MATLAB</b>, along with the design and performance evaluation of feedback and digital/robust control systems. The main objective is to develop practical skills with modern control tools and simulation software.
+    </p>
+  </div>
+</div>
       <!-- ME 142 -->
       <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
         <h3 class="font-semibold text-lg text-gray-900 mb-2">ME 142 – Workshop Sessional</h3>
@@ -270,6 +284,23 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
   document.getElementById('mobile-menu-button').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
+
+  function toggleExpand(button) {
+  const details = button.closest('.bg-white').querySelector('.course-details');
+  const icon = button.querySelector('svg');
+  
+  if (details.style.maxHeight === '0px' || !details.style.maxHeight) {
+    // Expand
+    details.style.maxHeight = details.scrollHeight + 'px';
+    icon.style.transform = 'rotate(180deg)';
+    button.setAttribute('aria-expanded', 'true');
+  } else {
+    // Collapse
+    details.style.maxHeight = '0px';
+    icon.style.transform = 'rotate(0deg)';
+    button.setAttribute('aria-expanded', 'false');
+  }
+}
 </script>
   
  </body>
