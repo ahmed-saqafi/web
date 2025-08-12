@@ -69,8 +69,8 @@
       }
 
       .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
       }
     }
     
@@ -154,7 +154,7 @@
           <p class="text-lg text-gray-800 py-1">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science &amp; Technology, Bangladesh</p>
           <p class="text-lg text-gray-600 py-1">Former Mechanical Team Lead<br>Mongol Barota - MIST Mars Rover Society</p>
         </div>
-        <div class="px-16 flex-shrink- mobile-order-1">
+        <div class="px-16 py-8 flex-shrink- mobile-order-1">
           <img src="https://placehold.co/250x250/e2e8f0/334155?text=AS" 
                alt="Profile image" 
                class="profile-image" 
@@ -221,28 +221,26 @@ Bachelor of Science in Mechanical Engineering from the Military Institute of Sci
   <section id="publications" class="max-w-4xl mx-auto py-8 px-4">
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Publications</h2>
     <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
-  <div class="flex items-start justify-between mb-2">
+  <div class="flex items-start justify-between">
     <div class="flex-1 pr-4">
       <h3 class="font-semibold text-lg text-gray-900">Investigation of the Mechanical Properties of Repurposed-Net-Bag Reinforced Plastic</h3>
       <p class="text-sm text-gray-700 mt-2">
         <span class="font-semibold">Saqafi, Ahmed A.</span>, Afnan Sadia, Al-Amin R. Tarek, Ahad A. Alim, Farzana Y. Tuly, and Md. A. Rahman
       </p>
       <p class="text-sm text-gray-500 italic mt-1">MIST International Journal of Science and Technology, 13(1), 59-64 (2025)</p>
-      <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block mt-4 text-blue-600 font-semibold hover:underline">View Publication →</a>
+      <div class="flex items-center mt-4">
+        <button class="expand-btn bg-blue-100 hover:bg-blue-200 transition-colors duration-200 px-4 py-2 rounded-lg flex items-center gap-2" onclick="toggleExpandAbstract(this)" aria-label="Toggle abstract" aria-expanded="false">
+          <span class="text-blue-600 text-sm">Abstract</span>
+          <svg class="w-4 h-4 transform transition-transform duration-300 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(0deg);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block text-blue-600 font-semibold hover:underline ml-6 mr-2">View Publication →</a>
+      </div>
     </div>
-    <button 
-      class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100 flex-shrink-0"
-      onclick="toggleExpandAbstract(this)"
-      aria-label="Toggle abstract"
-      aria-expanded="false"
-    >
-      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
   </div>
   
-  <div class="abstract-details overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+  <div class="abstract-details overflow-hidden transition-all duration-300 ease-in-out max-h-0" style="max-height: 0px;">
     <div class="pt-4 border-t border-gray-200">
       <h4 class="font-semibold text-gray-900 mb-2">Abstract:</h4>
       <p class="text-gray-700 leading-relaxed text-base text-justify">
