@@ -35,34 +35,7 @@
     }
     
     .layout { display: flex; min-height: 100vh; }
-    .sidebar {
-      position: fixed;
-      inset: 0 auto 0 0;
-      width: 260px;
-      background: linear-gradient(180deg, var(--panel), #f9fafb);
-      border-right: 1px solid var(--border);
-      padding: 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transform: translateX(-100%);
-      transition: transform 220ms ease;
-      z-index: 40;
-    }
-    .sidebar header {
-      display: flex; align-items: center; gap: 10px;
-      padding-bottom: 8px; border-bottom: 1px dashed var(--border);
-    }
-    .brand-dot { width: 10px; height: 10px; border-radius: 999px; background: var(--brand); box-shadow: 0 0 6px rgba(37,99,235,.7); }
-    .sidebar h1 { font-size: 1.05rem; margin: 0; letter-spacing: .3px; }
-    .nav-link {
-      display: flex; align-items: center; gap: 10px;
-      padding: 10px 12px; border-radius: 12px;
-      color: var(--text); text-decoration: none; font-size: 0.95rem;
-      border: 1px solid transparent;
-    }
-    .nav-link:hover { background: #f3f4f6; border-color: var(--border); }
-    .nav-link.active { background: #e0f2fe; border-color: #bae6fd; }
+    
     .content {
       flex: 1;
       width: 100%;
@@ -88,7 +61,7 @@
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 18px; padding: 16px;
+      padding: 24px;
       box-shadow: 0 4px 12px rgba(0,0,0,.05);
     }
     .muted { color: var(--muted); font-size: .95rem; }
@@ -98,12 +71,9 @@
       position: fixed; inset: 0; background: rgba(0,0,0,.2); display: none; z-index: 30;
       backdrop-filter: blur(2px);
     }
-    body.sidebar-open .sidebar { transform: translateX(0); }
-    body.sidebar-open .overlay { display: block; }
+
     @media (min-width: 992px) {
-      .sidebar { transform: none; }
       .overlay { display: none !important; }
-      .content { margin-left: 260px; padding: 32px; }
       .topbar .menu-btn { display: none; }
       .grid { grid-template-columns: repeat(12, 1fr); }
       .span-4 { grid-column: span 4; }
@@ -201,33 +171,22 @@
 
   <!-- Layout -->
 <div class="layout">
-  <aside class="sidebar" style="padding-top: 5rem;">
-    <nav>
-      <a class="nav-link active" href="#intro">Overview</a>
-      <a class="nav-link" href="#impact">Impact</a>
-      <a class="nav-link" href="#design-analysis">Design & Analysis</a>
-      <a class="nav-link" href="#evaluation">Evaluation</a>
-      <a class="nav-link" href="#recognition">Recognition</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
-  </aside>
 
-  <div class="overlay" data-close-overlay></div>
-
-  <main class="content">
+  <main class="content max-w-4xl mx-auto">
+    
     <section id="intro" class="card mb-4 rounded-lg">
-      <h1 class="font-semibold text-xl text-gray-900">Autonomous Rover Navigation System</h2>
+      <h1 class="pb-8 pt-4 font-semibold text-4xl text-gray-900">Autonomous Rover Navigation System</h2>
       <p class="muted">A cutting-edge autonomous rover platform developed to navigate complex terrains using real-time sensor fusion, machine learning, and robust control algorithms.</p>
-      <img class="media rounded-md" src="https://placehold.co/1200x450/png" alt="Project Banner" />
+      <img class="media rounded-md mt-4" src="https://placehold.co/1200x450/png" alt="Project Banner" />
     </section>
 
     <section id="impact" class="card mb-4 rounded-lg">
-      <h3 class="font-semibold text-lg text-gray-900">Impact</h3>
+      <h3 class="font-semibold text-lg pb-4 text-gray-900">Impact</h3>
       <p>The project advances autonomous vehicle research by offering a scalable test platform for navigation in unstructured environments. It demonstrates applications in disaster response, planetary exploration, and precision agriculture.</p>
     </section>
 
     <section id="design-analysis" class="card mb-4 rounded-lg">
-      <h3 class="font-semibold text-lg text-gray-900">Design & Analysis</h3>
+      <h3 class="font-semibold text-lg py-4 text-gray-900">Design & Analysis</h3>
       <p>The system integrates LiDAR, GPS, IMUs, and stereo vision into a unified sensor fusion pipeline. A modular chassis design enables rapid prototyping, while CAD and FEA simulations ensured mechanical integrity under diverse load conditions.</p>
        <div class="py-4 ">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
@@ -260,16 +219,15 @@
             <img src="" alt="" class="lightbox-image" id="lightbox-image">
           </div>
         </div>
-      </div>
     </section>
 
     <section id="evaluation" class="card mb-4 rounded-lg">
-      <h3 class="font-semibold text-lg text-gray-900">Evaluation</h3>
+      <h3 class="font-semibold text-lg pb-4 text-gray-900">Evaluation</h3>
       <p>Performance was validated through field trials over varying terrains, with a 92% navigation accuracy and consistent obstacle avoidance at speeds up to 3 m/s. Energy efficiency improved by 18% compared to baseline designs.</p>
     </section>
 
     <section id="recognition" class="card mb-4 rounded-lg">
-      <h3 class="font-semibold text-lg text-gray-900">Recognition</h3>
+      <h3 class="font-semibold text-lg pb-4 text-gray-900">Recognition</h3>
       <p>The project received the <strong>Best Innovation Award</strong> at the National Robotics Challenge and was presented at the IEEE International Conference on Robotics and Automation (ICRA).</p>
     </section>
   </main>
