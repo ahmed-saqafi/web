@@ -175,7 +175,7 @@
   <main class="content max-w-5xl mx-auto">
     
     <section id="intro" class="card mb-4 rounded-lg">
-      <h1 class="pb-8 pt-4 font-semibold text-4xl text-gray-900">Autonomous Rover Navigation System</h2>
+      <h1 class="pb-8 pt-4 font-semibold text-4xl text-gray-900">Autonomous Rover Navigation System</h1>
       <p class="muted">A cutting-edge autonomous rover platform developed to navigate complex terrains using real-time sensor fusion, machine learning, and robust control algorithms.</p>
       <img class="media rounded-md mt-4" src="https://placehold.co/1200x450/png" alt="Project Banner" />
     </section>
@@ -237,21 +237,18 @@
   </main>
 </div>
 
-
   <script>
     const body = document.body;
     const toggle = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const sidebarToggle = document.querySelector('#menuToggle');
     const overlay = document.querySelector('.overlay');
-    const year = document.getElementById('y');
-    year.textContent = new Date().getFullYear();
 
     toggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Robust, non-inline JS so it works even where inline handlers are blocked
+    // Gallery modal functionality
     document.addEventListener('DOMContentLoaded', function () {
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImage');
@@ -260,7 +257,7 @@
       function openModal(src) {
         modalImg.src = src;
         modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // prevent background scroll
+        document.body.style.overflow = 'hidden';
       }
 
       function closeModal() {
@@ -280,21 +277,24 @@
       // Close interactions
       closeBtn.addEventListener('click', closeModal);
       modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal(); // click backdrop to close
+        if (e.target === modal) closeModal();
       });
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
       });
 
-      // Optional: close on swipe down (basic)
+      // Touch interactions for mobile
       let startY = null;
-      modal.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; }, { passive: true });
+      modal.addEventListener('touchstart', (e) => { 
+        startY = e.touches[0].clientY; 
+      }, { passive: true });
+      
       modal.addEventListener('touchmove', (e) => {
-        if (startY !== null && e.touches[0].clientY - startY > 80) closeModal();
+        if (startY !== null && e.touches[0].clientY - startY > 80) {
+          closeModal();
+        }
       }, { passive: true });
     });
-
-    
   </script>
 </body>
 </html>
