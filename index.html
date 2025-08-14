@@ -53,7 +53,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 4px;
       }
 
       .mobile-order-1 {
@@ -69,8 +69,8 @@
       }
 
       .profile-image {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
       }
     }
     
@@ -141,12 +141,12 @@
       <!-- Desktop: Text left, Image right | Mobile: Image top, Text bottom -->
       <div class="desktop-layout">
         <div class="text-block mobile-order-2">
-          <h1 class="text-4xl md:text-5xl py-4 px-2 font-bold text-gray-900 mb-3">Ahmed Ahnaf Saqafi</h1>
-          <p class="text-xl text-gray-600 p-2">Graduate Mechanical Engineer</p>
-          <p class="text-lg text-gray-800 p-2">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science &amp; Technology, Bangladesh</p>
-          <p class="text-lg text-gray-600 p-2">Former Mechanical Team Lead<br>Mongol Barota - MIST Mars Rover Society</p>
+          <h1 class="text-4xl md:text-5xl py-4 px-1 text-center md:text-start font-bold text-gray-900 mb-3">Ahmed Ahnaf Saqafi</h1>
+          <p class="text-xl text-gray-600 text-center md:text-start p-1">Graduate Mechanical Engineer</p>
+          <p class="text-lg text-gray-800 text-center md:text-start p-1">Lecturer, Department of Mechanical Engineering<br>Military Institute of Science &amp; Technology, Bangladesh</p>
+          <p class="text-lg text-gray-600 text-center md:text-start p-1">Former Mechanical Team Lead<br>Mongol Barota - MIST Mars Rover Society</p>
         </div>
-        <div class="px-16 py-2 flex-shrink- mobile-order-1">
+        <div class="px-12 md:pl-38 flex-shrink- mobile-order-1">
           <img src="https://placehold.co/250x250/1F1D1D/FAFAFA?font=montserrat&amp;text=AS" alt="Profile image" class="profile-image" onerror="this.onerror=null;this.src='https://placehold.co/150x150/e2e8f0/334155?text=AAS';">
         </div>
       </div>
@@ -215,7 +215,7 @@ I am currently working as a Lecturer in Mechanical Engineering at the Military I
           <p class="text-sm text-gray-500 italic mt-1">MIST International Journal of Science and Technology, 13(1), 59-64 (2025)</p>
             <a href="https://doi.org/10.47981/j.mijst.13(01)2025.488(59-64)" target="_blank" class="inline-block text-blue-500 font-semibold hover:underline mt-4 ml-1">View Publication →</a>
             <button class="expand-btn bg-blue-100 hover:bg-blue-200 transition-colors duration-200 px-4 py-2 mt-4 rounded-lg flex items-center gap-2" onclick="toggleExpandAbstract(this)" aria-label="Toggle abstract" aria-expanded="false">
-              <span class="text-blue-600 text-sm abstract-text">Show Abstract</span>
+              <span class="text-blue-600 text-base abstract-text">Show Abstract</span>
               <svg class="w-4 h-4 transform transition-transform duration-300 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="transform: rotate(0deg);">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
