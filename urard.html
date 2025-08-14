@@ -5,31 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Professional Portfolio with Collapsible Sidebar</title>
   <meta name="description" content="A simple, responsive webpage with a sidebar that collapses on mobile." />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --bg: #f8fafc;         /* light slate-50 */
-      --bg-2: #ffffff;       /* white */
-      --panel: #ffffff;      /* white */
-      --card: #ffffff;       /* white */
-      --text: #1f2937;       /* gray-800 */
-      --muted: #6b7280;      /* gray-500 */
-      --brand: #2563eb;      /* blue-600 */
-      --border: #e5e7eb;     /* gray-200 */
+      --bg: #f8fafc;
+      --bg-2: #ffffff;
+      --panel: #ffffff;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #2563eb;
+      --border: #e5e7eb;
     }
-
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
       color: var(--text);
       background: radial-gradient(1200px 800px at 10% -10%, #e2e8f0 0%, var(--bg) 55%), linear-gradient(180deg, #f1f5f9, var(--bg));
       overflow-x: hidden;
     }
-
     .layout { display: flex; min-height: 100vh; }
-
-    /* Sidebar */
     .sidebar {
       position: fixed;
       inset: 0 auto 0 0;
@@ -50,7 +48,6 @@
     }
     .brand-dot { width: 10px; height: 10px; border-radius: 999px; background: var(--brand); box-shadow: 0 0 6px rgba(37,99,235,.7); }
     .sidebar h1 { font-size: 1.05rem; margin: 0; letter-spacing: .3px; }
-    .sidebar nav { display: grid; gap: 8px; }
     .nav-link {
       display: flex; align-items: center; gap: 10px;
       padding: 10px 12px; border-radius: 12px;
@@ -59,16 +56,12 @@
     }
     .nav-link:hover { background: #f3f4f6; border-color: var(--border); }
     .nav-link.active { background: #e0f2fe; border-color: #bae6fd; }
-
-    /* Content */
     .content {
       flex: 1;
       width: 100%;
       padding: 24px;
       margin-left: 0;
     }
-
-    /* Topbar */
     .topbar {
       position: sticky; top: 0; z-index: 30;
       backdrop-filter: blur(8px);
@@ -77,11 +70,6 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 10px 16px; border-radius: 16px; margin-bottom: 18px;
     }
-
-    .title {
-      font-size: 1.15rem; font-weight: 600; letter-spacing: .2px;
-    }
-
     .btn {
       background: var(--card); color: var(--text);
       border: 1px solid var(--border);
@@ -89,8 +77,6 @@
       cursor: pointer; font-weight: 600;
     }
     .btn:hover { border-color: #93c5fd; background: #f0f9ff; }
-
-    /* Cards */
     .grid { display: grid; gap: 18px; }
     .card {
       background: var(--card);
@@ -98,23 +84,15 @@
       border-radius: 18px; padding: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,.05);
     }
-    .card h3 { margin: 0 0 8px 0; font-size: 1.05rem; }
     .muted { color: var(--muted); font-size: .95rem; }
     .media { width: 100%; border-radius: 12px; border: 1px solid var(--border); display: block; }
-
-    /* Footer */
     footer { margin-top: 28px; padding-top: 16px; border-top: 1px dashed var(--border); color: var(--muted); font-size: .9rem; }
-
-    /* Mobile-first */
     .overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,.2); display: none; z-index: 30;
       backdrop-filter: blur(2px);
     }
-
     body.sidebar-open .sidebar { transform: translateX(0); }
     body.sidebar-open .overlay { display: block; }
-
-    /* Desktop */
     @media (min-width: 992px) {
       .sidebar { transform: none; }
       .overlay { display: none !important; }
@@ -124,18 +102,57 @@
       .span-4 { grid-column: span 4; }
       .span-8 { grid-column: span 8; }
     }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      .sidebar { transition: none; }
-    }
   </style>
 </head>
 <body>
+  
+  <!-- Top Navbar -->
+  <nav class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+        <a href="#" class="font-bold text-lg text-gray-900">Ahmed A. Saqafi</a>
+        <div class="hidden md:flex items-center space-x-4 text-gray-600">
+          <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="flex items-center space-x-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+            <i class="fa-solid fa-graduation-cap text-xl"></i><span class="text-sm font-medium">Google Scholar</span>
+          </a>
+          <a href="https://www.linkedin.com/in/saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+            <i class="fa-brands fa-linkedin text-xl"></i><span class="text-sm font-medium">LinkedIn</span>
+          </a>
+          <a href="https://researchgate.net/profile/your-profile" target="_blank" class="flex items-center space-x-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+            <i class="fa-solid fa-book-open-reader text-xl"></i><span class="text-sm font-medium">ResearchGate</span>
+          </a>
+          <a href="https://github.com/ahmed-saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+            <i class="fa-brands fa-github text-xl"></i><span class="text-sm font-medium">GitHub</span>
+          </a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden flex-col space-y-2 mt-2 pb-3 md:hidden">
+        <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+          <i class="fa-solid fa-graduation-cap text-xl"></i><span class="text-sm font-medium">Google Scholar</span>
+        </a>
+        <a href="https://www.linkedin.com/in/saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+          <i class="fa-brands fa-linkedin text-xl"></i><span class="text-sm font-medium">LinkedIn</span>
+        </a>
+        <a href="https://researchgate.net/profile/your-profile" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+          <i class="fa-solid fa-book-open-reader text-xl"></i><span class="text-sm font-medium">ResearchGate</span>
+        </a>
+        <a href="https://github.com/ahmed-saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+          <i class="fa-brands fa-github text-xl"></i><span class="text-sm font-medium">GitHub</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Layout -->
   <div class="layout">
-    <aside class="sidebar" aria-label="Sidebar navigation">
+    <aside class="sidebar">
       <header>
-        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-dot"></span>
         <h1>Ahmed Saqafi</h1>
       </header>
       <nav>
@@ -153,93 +170,26 @@
     <div class="overlay" data-close-overlay></div>
 
     <main class="content">
-      <div class="topbar">
-        <button class="btn menu-btn" aria-expanded="false" aria-controls="sidebar" id="menuToggle">☰ Menu</button>
-        <div class="title">Professional Portfolio</div>
-        <a class="btn" href="#contact">Get in touch</a>
-      </div>
-
       <section id="intro" class="card">
         <h3>About Me</h3>
-        <p class="muted">Graduated at the top of the class, with a strong academic foundation complemented by practical expertise developed through participation in prestigious international robotics competitions.</p>
-        <img class="media" src="https://placehold.co/1200x450/png" alt="Placeholder banner" />
+        <p class="muted">Graduated at the top of the class, with strong academic foundation and practical expertise.</p>
+        <img class="media" src="https://placehold.co/1200x450/png" alt="Banner" />
       </section>
-
-      <div class="grid" style="margin-top:18px;">
-        <section class="card span-8">
-          <h3 id="projects">Featured Project</h3>
-          <p class="muted">An end-to-end robotics control stack featuring sensor fusion, real-time motor control, and cloud telemetry. The system integrates IMUs, encoders, and a model-based controller for precise actuation.</p>
-          <img class="media" src="https://placehold.co/900x500/png" alt="Project screenshot placeholder" />
-        </section>
-        <aside class="card span-4">
-          <h3>Quick Stats</h3>
-          <ul class="muted">
-            <li>3+ years research & development</li>
-            <li>Top-of-class graduate</li>
-            <li>Multiple international competitions</li>
-            <li>First-author publication(s)</li>
-          </ul>
-        </aside>
-      </div>
-
-      <div class="grid" style="margin-top:18px;">
-        <section class="card span-4">
-          <h3 id="publications">Publications</h3>
-          <p class="muted">Peer-reviewed papers on motion planning, compliant actuation, and human-robot interaction.</p>
-          <img class="media" src="https://placehold.co/600x400/jpg" alt="Publications placeholder" />
-        </section>
-        <section class="card span-4">
-          <h3 id="awards">Awards</h3>
-          <p class="muted">Recipient of academic and competitive accolades including top-ranked graduation and robotics medals.</p>
-          <img class="media" src="https://placehold.co/600x400/png" alt="Awards placeholder" />
-        </section>
-        <section class="card span-4">
-          <h3>Gallery</h3>
-          <p class="muted">Competition highlights and lab snapshots.</p>
-          <img class="media" src="https://placehold.co/600x400/webp" alt="Gallery placeholder" />
-        </section>
-      </div>
-
-      <section id="contact" class="card" style="margin-top:18px;">
-        <h3>Contact</h3>
-        <p class="muted">Email: your.name@example.com · LinkedIn / GitHub / Google Scholar</p>
-        <img class="media" src="https://placehold.co/1200x300/svg" alt="Contact section placeholder" />
-      </section>
-
-      <footer>
-        Built with semantic HTML and a mobile-first responsive layout. Sidebar collapses off-canvas on small screens and is fixed on desktop.
-      </footer>
     </main>
   </div>
 
   <script>
     const body = document.body;
-    const toggle = document.getElementById('menuToggle');
+    const toggle = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const sidebarToggle = document.querySelector('#menuToggle');
     const overlay = document.querySelector('.overlay');
     const year = document.getElementById('y');
     year.textContent = new Date().getFullYear();
 
-    function openSidebar() {
-      body.classList.add('sidebar-open');
-      toggle.setAttribute('aria-expanded', 'true');
-    }
-    function closeSidebar() {
-      body.classList.remove('sidebar-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-
     toggle.addEventListener('click', () => {
-      if (body.classList.contains('sidebar-open')) closeSidebar(); else openSidebar();
+      mobileMenu.classList.toggle('hidden');
     });
-
-    overlay.addEventListener('click', closeSidebar);
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeSidebar();
-    });
-
-    const mq = window.matchMedia('(min-width: 992px)');
-    mq.addEventListener('change', (e) => { if (e.matches) closeSidebar(); });
   </script>
 </body>
 </html>
