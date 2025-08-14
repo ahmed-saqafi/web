@@ -270,13 +270,13 @@ I am currently working as a Lecturer in Mechanical Engineering at the Military I
       <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
         <div class="flex items-center justify-between mb-2">
           <h3 class="font-semibold text-lg text-gray-900">ME 376 – Control Engineering Sessional</h3>
-          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="true">
-            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="flase">
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
         </div>
-        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0px;">
           <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
             This course provides hands-on experience in analyzing, modeling, and controlling various physical systems, including mechanical, electrical, hydraulic, and pneumatic. Students will learn to apply control engineering principles in real-world scenarios through laboratory experiments that bridge theory and practice. The curriculum covers block diagrams, transfer functions, and the use of <b>PID controllers</b>. A significant portion of the course involves system response analysis and simulation, primarily using <b>MATLAB</b>, along with the design and performance evaluation of feedback and digital/robust control systems. The main objective is to develop practical skills with modern control tools and simulation software.
           </p>
@@ -286,13 +286,13 @@ I am currently working as a Lecturer in Mechanical Engineering at the Military I
       <div class="bg-white rounded-lg shadow-md p-6 transition-shadow duration-300 hover:shadow-xl">
         <div class="flex items-center justify-between mb-2">
           <h3 class="font-semibold text-lg text-gray-900">ME 142 – Workshop Sessional</h3>
-          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="true">
-            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="false">
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
         </div>
-        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0px;">
           <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
             This course offers practical training in fundamental manufacturing processes. Students gain hands-on experience with machining, welding, casting, molding, and sheet metal working. They learn to use key workshop tools, including lathes, milling machines, and drilling machines, while also practicing essential skills like measuring, marking, and cutting. The primary goal is to introduce students to these processes and help them develop the practical skills needed for fabricating simple mechanical components. The course also emphasizes the importance of safety and quality in manufacturing practices.
           </p>
@@ -305,14 +305,14 @@ I am currently working as a Lecturer in Mechanical Engineering at the Military I
             <h3 class="font-semibold text-lg text-gray-900">ME 180 – Basic Engineering Drawing</h3>
             <h3 class="font-semibold text-lg text-gray-900">ME 150 – Mechanical Engineering Drawing</h3>
           </div>
-          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="true">
-            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="expand-btn text-gray-500 hover:text-gray-700 transition-colors duration-200 p-2 rounded-full hover:bg-gray-100" onclick="toggleExpand(this)" aria-label="Toggle course details" aria-expanded="false">
+            <svg class="w-5 h-5 transform transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
         </div>
         
-        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: none;">
+        <div class="course-details overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0px;">
           <p class="text-gray-700 leading-relaxed text-base text-justify pt-2">
             This course focuses on both manual and CAD-based engineering drawing. Students learn to communicate technical information accurately by creating and interpreting engineering sketches and drawings. The content includes orthographic projection, isometric and sectional views, and the fundamentals of 2D drafting using <b>SolidWorks</b> or similar CAD software. The objective is to enable students to read, modify, and create technical drawings, laying a solid foundation for future design and drafting courses.
           </p>
@@ -366,22 +366,22 @@ I am currently working as a Lecturer in Mechanical Engineering at the Military I
     document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 
-  function toggleExpand(button) {
-  const details = button.closest('.bg-white').querySelector('.course-details');
-  const icon = button.querySelector('svg');
-  
-  if (details.style.maxHeight === '0px' || !details.style.maxHeight) {
-    // Expand
-    details.style.maxHeight = details.scrollHeight + 'px';
-    icon.style.transform = 'rotate(180deg)';
-    button.setAttribute('aria-expanded', 'true');
-  } else {
-    // Collapse
-    details.style.maxHeight = '0px';
-    icon.style.transform = 'rotate(0deg)';
-    button.setAttribute('aria-expanded', 'false');
-  }
-}
+      function toggleExpand(button) {
+            const details = button.closest('.bg-white').querySelector('.course-details');
+            const icon = button.querySelector('svg');
+            
+            if (details.style.maxHeight === '0px' || !details.style.maxHeight) {
+                // Expand
+                details.style.maxHeight = details.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+                button.setAttribute('aria-expanded', 'true');
+            } else {
+                // Collapse
+                details.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+                button.setAttribute('aria-expanded', 'false');
+            }
+        }
 
   function toggleExpandAbstract(button) {
         const abstractDetails = button.closest('.bg-white').querySelector('.abstract-details');
