@@ -39,7 +39,7 @@
     .content {
       flex: 1;
       width: 100%;
-      padding: 24px;
+      padding: 16px;
       margin-left: 0;
     }
     .topbar {
@@ -61,7 +61,7 @@
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      padding: 24px;
+      padding: 18px;
       box-shadow: 0 4px 12px rgba(0,0,0,.05);
     }
     .muted { color: var(--muted); font-size: .95rem; }
@@ -70,6 +70,15 @@
     .overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,.2); display: none; z-index: 30;
       backdrop-filter: blur(2px);
+    }
+
+    @media (min-width: 640px) {
+      .content {
+        padding: 24px;
+      }
+      .card {
+        padding: 24px;
+      }
     }
 
     @media (min-width: 992px) {
@@ -130,9 +139,9 @@
   
   <!-- Top Navbar -->
   <nav class="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center py-3">
-        <a href="https://saqafi.vercel.app/" class="font-bold text-lg text-gray-900">Ahmed A. Saqafi</a>
+        <a href="https://saqafi.vercel.app/" class="font-bold text-base sm:text-lg text-gray-900">Ahmed A. Saqafi</a>
         <div class="hidden md:flex items-center space-x-4 text-gray-600">
           <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="flex items-center space-x-2 px-3 py-1 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
             <i class="fa-solid fa-graduation-cap text-xl"></i><span class="text-sm font-medium">Google Scholar</span>
@@ -148,22 +157,22 @@
           </a>
         </div>
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none p-2 rounded-md hover:bg-gray-100">
             <i class="fa-solid fa-bars text-2xl"></i>
           </button>
         </div>
       </div>
       <div id="mobile-menu" class="hidden flex-col space-y-2 mt-2 pb-3 md:hidden">
-        <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+        <a href="https://scholar.google.com/citations?user=your-id" target="_blank" class="flex items-center space-x-2 px-4 py-3 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
           <i class="fa-solid fa-graduation-cap text-xl"></i><span class="text-sm font-medium">Google Scholar</span>
         </a>
-        <a href="https://www.linkedin.com/in/saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+        <a href="https://www.linkedin.com/in/saqafi" target="_blank" class="flex items-center space-x-2 px-4 py-3 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
           <i class="fa-brands fa-linkedin text-xl"></i><span class="text-sm font-medium">LinkedIn</span>
         </a>
-        <a href="https://researchgate.net/profile/your-profile" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+        <a href="https://researchgate.net/profile/your-profile" target="_blank" class="flex items-center space-x-2 px-4 py-3 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
           <i class="fa-solid fa-book-open-reader text-xl"></i><span class="text-sm font-medium">ResearchGate</span>
         </a>
-        <a href="https://github.com/ahmed-saqafi" target="_blank" class="flex items-center space-x-2 px-3 py-2 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
+        <a href="https://github.com/ahmed-saqafi" target="_blank" class="flex items-center space-x-2 px-4 py-3 rounded-md bg-gray-100 hover:bg-blue-100 transition-colors">
           <i class="fa-brands fa-github text-xl"></i><span class="text-sm font-medium">GitHub</span>
         </a>
       </div>
@@ -176,8 +185,8 @@
   <main class="content max-w-5xl mx-auto">
     
     <section id="intro" class="card mb-4 rounded-lg">
-  <h1 class="pb-8 pt-4 font-semibold text-4xl text-gray-900">Universal Robot‑Assisted Elbow Rehabilitation System</h1>
-  <p class="muted">A lightweight, low‑cost, 3D‑printed elbow rehab device using a BLDC motor, compact cycloidal gearbox, and cable‑drive with PID control for precise flexion–extension therapy. 
+  <h1 class="pb-5 pt-3 font-semibold text-3xl sm:text-4xl leading-tight text-gray-900">Universal Robot‑Assisted Elbow Rehabilitation System</h1>
+  <p class="muted leading-relaxed">A lightweight, low‑cost, 3D‑printed elbow rehab device using a BLDC motor, compact cycloidal gearbox, and cable‑drive with PID control for precise flexion–extension therapy. 
   This assistive
 device has been designed and developed that focuses on elbow joint flexion and extension.
 The design was refined iteratively to reduce weight and manufacturing complexity. The
@@ -194,18 +203,18 @@ cycle time requirements based on user input.
 
 <section id="impact" class="card mb-4 rounded-lg">
   <h3 class="font-semibold text-lg pb-4 text-gray-900">Impact</h3>
-  <p>Delivers consistent, safe elbow flexion–extension with sub‑8 mm endpoint error over 176 mm travel, reducing therapist workload and improving accessibility through portability and low cost.</p> 
+  <p class="leading-relaxed">Delivers consistent, safe elbow flexion–extension with sub‑8 mm endpoint error over 176 mm travel, reducing therapist workload and improving accessibility through portability and low cost.</p> 
 </section>
 
 <section id="design-analysis" class="card mb-4 rounded-lg">
   <h3 class="font-semibold text-lg py-4 text-gray-900">Design & Analysis</h3>
-  <p>Fully 3D‑printed structure: PLA for motor/gearbox housing and load paths; TPU for patient‑contact braces to improve comfort and fit.</p> 
-  <p>Actuation: Compact BLDC motor (rated 6 Nm, peak 18 Nm) paired with a cycloidal gearbox and GT2 belt tensioned drive; cable‑driven elbow assistance to avoid rigid joint alignment issues.</p> 
-  <p>Control: PID loop with encoder feedback regulates position/velocity and cycle time based on user input; stable response with minimal overshoot across loads/RPMs.</p> 
-  <p>Analysis: SolidWorks linear static FEA confirmed stresses and displacements within TPU limits under worst‑case angles (30°, 45°, 60°) and loads; mesh‑independent results.</p> 
+  <p class="leading-relaxed">Fully 3D‑printed structure: PLA for motor/gearbox housing and load paths; TPU for patient‑contact braces to improve comfort and fit.</p> 
+  <p class="leading-relaxed">Actuation: Compact BLDC motor (rated 6 Nm, peak 18 Nm) paired with a cycloidal gearbox and GT2 belt tensioned drive; cable‑driven elbow assistance to avoid rigid joint alignment issues.</p> 
+  <p class="leading-relaxed">Control: PID loop with encoder feedback regulates position/velocity and cycle time based on user input; stable response with minimal overshoot across loads/RPMs.</p> 
+  <p class="leading-relaxed">Analysis: SolidWorks linear static FEA confirmed stresses and displacements within TPU limits under worst‑case angles (30°, 45°, 60°) and loads; mesh‑independent results.</p> 
    <div class="py-2">
       <!-- Gallery -->
-      <div class="max-w-6xl mx-auto p-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div class="max-w-6xl mx-auto p-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
         <!-- Use placehold.co/600x400 as requested -->
         <img src="https://placehold.co/600x400?text=Image+1" data-full="https://placehold.co/600x400?text=Image+1" alt="Placeholder 1"
              class="js-thumb cursor-pointer rounded shadow hover:opacity-80" />
@@ -241,9 +250,9 @@ cycle time requirements based on user input.
 
 <section id="evaluation" class="card mb-4 rounded-lg">
   <h3 class="font-semibold text-lg pb-4 text-gray-900">Evaluation</h3>
-  <p>Accuracy: ≤8 mm deviation at constant speed; ≤5 mm at constant load over 176 mm path; ROM coverage 0°–140°.</p> 
-  <p>Motor tests: Consistent settling 0.25–0.5 s across 60/90/120 RPM and 0–1 kg loads; minimal RPM tracking error.</p> 
-  <p>Weight: ~0.89 kg total; portable elbow/forearm brace with integrated actuation; cost‑efficient additive manufacturing.</p> 
+  <p class="leading-relaxed">Accuracy: ≤8 mm deviation at constant speed; ≤5 mm at constant load over 176 mm path; ROM coverage 0°–140°.</p> 
+  <p class="leading-relaxed">Motor tests: Consistent settling 0.25–0.5 s across 60/90/120 RPM and 0–1 kg loads; minimal RPM tracking error.</p> 
+  <p class="leading-relaxed">Weight: ~0.89 kg total; portable elbow/forearm brace with integrated actuation; cost‑efficient additive manufacturing.</p> 
 </section>
 
     <section id="recognition" class="card mb-4 rounded-lg">
@@ -261,9 +270,9 @@ cycle time requirements based on user input.
   <!-- Footer -->
   <footer class="bg-white border-t py-6">
       <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://saqafi.vercel.app/" class="hover:underline">Ahmed Ahnaf Saqafi</a>. All Rights Reserved.
+      <span class="text-sm text-gray-500 text-center md:text-left dark:text-gray-400">© 2025 <a href="https://saqafi.vercel.app/" class="hover:underline">Ahmed Ahnaf Saqafi</a>. All Rights Reserved.
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap items-center justify-center md:justify-start mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
             <a href="#" class="hover:underline me-4 md:me-6">About</a>
         </li>
